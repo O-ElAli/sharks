@@ -1,0 +1,86 @@
+/* Utility Top Bar */
+.top-utility-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 40px 5px 40px;
+    background-color: #ffffff;
+}
+
+/* Inside components/component.css */
+
+.top-utility-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 40px 5px 40px;
+    background-color: #ffffff; /* Make sure this is solid #ffffff */
+}
+
+.top-utility-bar a:hover {
+    color: #0099cc;
+}
+
+/* Split Navigation Bar */
+.navbar-container {
+    position: relative;
+    width: 100%;
+    background: #ffffff; /* Make sure this is solid #ffffff */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 90px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    flex: 1;
+}
+
+.nav-links.left {
+    justify-content: flex-start;
+}
+
+.nav-links.right {
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    transition: color 0.3s ease;
+    
+    /* 2. Forces browsers to use crisp smoothing over complex graphics backgrounds */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #0099cc;
+}
+
+/* Centered Logo Overlay */
+.logo-wrapper {
+    position: relative;
+    z-index: 110;
+    margin: 0 20px;
+    top: 15px; 
+}
+
+.logo-wrapper img {
+    height: 140px; 
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}

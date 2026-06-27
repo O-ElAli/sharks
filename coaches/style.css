@@ -2,60 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     background-color: #f9fbfd;
     color: #333;
     background-image: url('../assets/Water_Left_BG_Full_Width.png');
     background-size: cover;
     background-attachment: fixed;
-}
-
-/* Header Grid Matching Layout Layout */
-.main-header {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid #eef2f5;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-    flex: 1;
-}
-
-.left-links { justify-content: flex-start; }
-.right-links { justify-content: flex-end; }
-
-.nav-links a {
-    text-decoration: none;
-    color: #3a4750;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-}
-
-.nav-links a:hover, 
-.nav-links a.active {
-    color: #0088cc;
-}
-
-.header-logo {
-    height: 75px;
-    width: auto;
 }
 
 /* Display Cards Grid */
@@ -129,4 +85,30 @@ body {
     font-size: 0.75rem;
     font-weight: 600;
     border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center !important;
+        margin: 10px 0;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .logo-wrapper {
+        order: -1;
+        top: 0;
+        margin-bottom: 15px;
+    }
+
+    .logo-wrapper img {
+        height: 100px;
+    }
 }

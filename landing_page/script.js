@@ -1,19 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Set current system date inside Registration field automatically
+    // 1. Fetch the shared header component
+    fetch('../components/header.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load shared header layout.");
+            }
+            return response.text();
+        })
+        .then(headerHTML => {
+            document.querySelector('.main-header').innerHTML = headerHTML;
+            console.log("Shared header successfully loaded into Landing Page.");
+
+            // FIX: Run your Navbar highlight logic HERE, right after elements are injected!
+            const navItems = document.querySelectorAll(".nav-item");
+            navItems.forEach(item => {
+                item.addEventListener("click", function() {
+                    navItems.forEach(nav => nav.classList.remove("active"));
+                    this.classList.add("active");
+                });
+            });
+        })
+        .catch(error => console.error("Error rendering navigation component:", error));
+        
+    // 2. Set current system date inside Registration field automatically
     const regDateField = document.getElementById("reg-date");
     if (regDateField) {
         const today = new Date().toISOString().split("T")[0];
         regDateField.value = today;
     }
-
-    // 2. Add visual feedback behavior to Navbar links
-    const navItems = document.querySelectorAll(".nav-item");
-    navItems.forEach(item => {
-        item.addEventListener("click", function() {
-            navItems.forEach(nav => nav.classList.remove("active"));
-            this.classList.add("active");
-        });
-    });
 
     // 3. Form intercept processing loop
     const form = document.getElementById("registrationForm");
