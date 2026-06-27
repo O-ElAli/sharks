@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharks Swim Team</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-utility-bar">
+        <a href="#signin">Sign up / Sign in</a>
+    </div>
+
+    <div class="navbar-container">
+        <nav class="navbar">
+            <div class="nav-links left">
+                <a href="#home" class="nav-item">HOME</a>
+                <a href="#book" class="nav-item">BOOK YOUR SPOT</a>
+                <a href="../coaches/index.html" class="nav-item">COACHES</a>
+            </div>
+            
+            <div class="logo-wrapper">
+                <img src="../assets/Sharks_Logo.png" alt="Sharks Swim Team Logo">
+            </div>
+            
+            <div class="nav-links right">
+                <a href="#champs" class="nav-item">OUR CHAMPS</a>
+                <a href="#shop" class="nav-item">SHOP</a>
+                <a href="#contact" class="nav-item">CONTACT US</a>
+            </div>
+        </nav>
+    </div>
+
+    <section id="home" class="hero-section">
+        <img class="left-splash-bg" src="../assets/Water_Left_Black.png" alt="Water Splash Accent">
+        
+        <div class="hero-content">
+            <h1 class="hero-title">WELCOME TO SHARKS TEAM</h1>
+        </div>
+    </section>
+
+    <section id="book" class="booking-section">
+        <div class="section-container">
+            <div class="form-header">
+                <h2>Registration Form</h2>
+                <p>Secure your place in the academy. Please fill in the swimmer's details below.</p>
+            </div>
+
+            <form id="registrationForm" action="#" method="POST">
+                <div class="form-grid">
+                    
+                    <div class="form-group">
+                        <label for="reg-date">Date of Registration</label>
+                        <input type="date" id="reg-date" name="reg_date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="fullname">Swinner's Full Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter complete legal name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <label class="radio-item"><input type="radio" name="gender" value="Male" required> M</label>
+                            <label class="radio-item"><input type="radio" name="gender" value="Female"> F</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="level">Swimming Level</label>
+                        <select id="level" name="level" required>
+                            <option value="" disabled selected>Select Current Skill Level</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced / Competitive</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job">Job / Occupation</label>
+                        <input type="text" id="job" name="job" placeholder="Parent or Swimmer's Occupation">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile #</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="e.g. +1 234 567 890" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Home Address</label>
+                        <textarea id="address" name="address" rows="2" placeholder="Street name, City, Zip code"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="schedule">Suggested Days / Times</label>
+                        <input type="text" id="schedule" name="schedule" placeholder="e.g. Mon & Wed at 4:00 PM">
+                    </div>
+
+                    <div class="form-group full-width" style="margin-top: 15px;">
+                        <label class="sub-header-label">Medical Information Declaration</label>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="medical-conditions">Medical Condition</label>
+                        <input type="text" id="medical-conditions" name="medical_conditions" placeholder="Specify any active medical status">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="injuries">Injuries</label>
+                        <input type="text" id="injuries" name="injuries" placeholder="Describe any physical injuries">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="allergies">Allergies</label>
+                        <input type="text" id="allergies" name="allergies" placeholder="Food, chemical, or medicine allergies">
+                    </div>
+
+                </div>
+
+                <div class="checkbox-section">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="past_lessons" value="Yes">
+                        <span>Has he/she taken any swimming lessons with us before?</span>
+                    </label>
+                    
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="whatsapp_consent" value="Yes" checked>
+                        <span>Do you receive Whatsapp messages from us?</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="social_media" value="Yes">
+                        <span>Do you follow us on social media?</span>
+                    </label>
+                </div>
+
+                <div class="disclaimer-box">
+                    Please note that the academy is not responsible for any injuries or accidents.
+                </div>
+
+                <div class="form-group full-width" style="margin-bottom: 30px;">
+                    <label for="signature">Name and signature</label>
+                    <input type="text" id="signature" name="signature" placeholder="Type full name to acknowledge terms" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

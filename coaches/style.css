@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9fbfd;
+    color: #333;
+    background-image: url('../assets/Water_Left_BG_Full_Width.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Header Grid Matching Layout Layout */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #eef2f5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+}
+
+.left-links { justify-content: flex-start; }
+.right-links { justify-content: flex-end; }
+
+.nav-links a {
+    text-decoration: none;
+    color: #3a4750;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #0088cc;
+}
+
+.header-logo {
+    height: 75px;
+    width: auto;
+}
+
+/* Display Cards Grid */
+.coaches-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.coaches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.coach-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.coach-card:hover {
+    transform: translateY(-5px);
+}
+
+.coach-image-wrapper {
+    position: relative;
+    height: 320px;
+    background-color: #eaeaea;
+}
+
+.coach-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coach-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 136, 204, 0.4);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.coach-card:hover .coach-overlay { opacity: 1; }
+
+.coach-info { padding: 25px; }
+.coach-age { color: #0088cc; font-weight: 600; margin-bottom: 15px; }
+
+.coach-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.trait-tag {
+    background-color: #f0f4f8;
+    color: #4a5568;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
